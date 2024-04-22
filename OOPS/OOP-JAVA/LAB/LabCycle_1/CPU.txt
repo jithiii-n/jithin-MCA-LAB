@@ -1,0 +1,46 @@
+public class CPU {
+    private double price;
+
+    public CPU(double price) {
+        this.price = price;
+    }
+
+    static class Processor {
+        private int cores;
+        private String manufacturer;
+
+        public Processor(int cores, String manufacturer) {
+            this.cores = cores;
+            this.manufacturer = manufacturer;
+        }
+
+        @Override
+        public String toString() {
+            return "Processor - Cores: " + cores + ", Manufacturer: " + manufacturer;
+        }
+    }
+
+    static class RAM {
+        private int memory;
+        private String manufacturer;
+
+        public RAM(int memory, String manufacturer) {
+            this.memory = memory;
+            this.manufacturer = manufacturer;
+        }
+
+        @Override
+        public String toString() {
+            return "RAM - Memory: " + memory + ", Manufacturer: " + manufacturer;
+        }
+    }
+
+    public static void main(String[] args) {
+        CPU myCPU = new CPU(250);
+
+        Processor myProcessor = new Processor(8, "Intel");
+        RAM myRAM = new RAM(16, "Corsair");
+        System.out.println(myProcessor);
+        System.out.println(myRAM);
+    }
+}
